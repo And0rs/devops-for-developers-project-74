@@ -2,8 +2,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.production
+    image: and0rs/devops-for-developers-project-74
     container_name: node_step_1
     command: make test
-    volumes:
-      - "./app:/app"
