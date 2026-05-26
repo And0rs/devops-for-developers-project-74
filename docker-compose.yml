@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: node_step_1
+    command: make test
+    volumes:
+      - "./app:/app"
