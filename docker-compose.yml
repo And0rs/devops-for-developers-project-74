@@ -18,6 +18,11 @@ services:
     image: and0rs/devops-for-developers-project-74
     container_name: node_step_1
     command: make test
+    environment:
+      DATABASE_HOST: db
+      DATABASE_NAME: postgres
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: password
     depends_on:
       db:
         condition: service_healthy
